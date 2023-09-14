@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  # https://github.com/IITDBGroup/cs520/blob/master/vizier/README.md
+  vizier:
+    image: iitdbgroup/vizier_iit_cs520_fall23:intel
+    ports:
+      - "5001:5001"
+      - "8089:8089"
+    volumes:
+      - ./vizier.db:/vizier.db
+    command: -p 5001
