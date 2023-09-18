@@ -5,6 +5,10 @@
 | Name            | Email                  |
 |-----------------|------------------------|
 | Zhang, Zhiliang | zzhang141@hawk.iit.edu |
+| Nie, Ruichao | rnie2@hawk.iit.edu |
+
+
+
 
 ## Folder Structure
 
