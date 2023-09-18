@@ -8,7 +8,7 @@
 | Nie, Ruichao | rnie2@hawk.iit.edu |
 
 
-updating test
+09/18/2023: upload Vizier First Steps Assignment (as name assignment 1)
 
 
 
