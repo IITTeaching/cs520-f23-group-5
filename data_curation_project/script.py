@@ -24,7 +24,23 @@ def edit_distance(s1, s2):
     return dp[m][n]
 vizierdb.export_module(edit_distance)
 
-import math
+def extract_longest_number_string(input_string):
+    current_number = ""
+    longest_number = ""
+    for char in input_string:
+        if char.isdigit() or char == '.':
+            current_number += char
+        else:
+            if len(current_number) > len(longest_number):
+                longest_number = current_number
+            current_number = ""
+    if len(current_number) > len(longest_number):
+        longest_number = current_number
+    if longest_number == '.':
+        return ""
+    return longest_number
+vizierdb.export_module(extract_longest_number_string)
+
 vizierdb.get_module("edit_distance")
 default_ds=vizierdb.get_dataset('food_coded')
 nulset=set()
@@ -91,22 +107,7 @@ for row in default_ds.rows:
             print(row.identifier,"->",cl,"->",v)
 #vizierdb.update_dataset('food_coded', default_ds)
 
-def extract_longest_number_string(input_string):
-    current_number = ""
-    longest_number = ""
-    for char in input_string:
-        if char.isdigit() or char == '.':
-            current_number += char
-        else:
-            if len(current_number) > len(longest_number):
-                longest_number = current_number
-            current_number = ""
-    if len(current_number) > len(longest_number):
-        longest_number = current_number
-    if longest_number == '.':
-        return ""
-    return longest_number
-vizierdb.export_module(extract_longest_number_string)
+
 
 import re
 default_ds=vizierdb.get_dataset('food_coded')
